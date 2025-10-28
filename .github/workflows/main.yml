@@ -1,0 +1,46 @@
+name: Level Access SDK Accessibility Test
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - 'feature/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps
+
+      - name: Run HTMLHint
+        run: npm run lint:html
+
+      - name: Run setup script
+        run: ./scripts/ubuntu_setup.sh
+
+      - name: Start nginx
+        run: sudo nginx -c "$(pwd)/nginx.conf"
+
+      - name: Curl the served page
+        run: curl http://domain.example.com:8080
+
+      - name: Run e2e tests
+        run: npm run test
+
+      - name: Stop Nginx
+        run: sudo nginx -s stop
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About — A Simple Sample Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="font-family: Arial, sans-serif; padding: 2em;">
+<header>
+    <h1>About Us</h1>
+</header>
+
+<main style="flex: 1;">
+    <!-- Accessibility flaw: no heading hierarchy -->
+    <p>Founded in 2020, our mission is to empower developers to build accessible digital experiences.</p>
+
+    <!-- Accessibility flaw: poor contrast -->
+    <p style="color: #0d1117; background-color: white;">
+        We believe accessibility should be part of every development workflow.
+    </p>
+
+    <!-- Accessibility flaw: vague link text -->
+    <p>To get in touch, <a href="contact-us.html">click here</a>.</p>
+</main>
+
+</body>
+</html>

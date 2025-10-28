@@ -1,0 +1,14 @@
+{
+  "name": "nginx-simple-website",
+  "version": "1.0.0",
+  "scripts": {
+    "lint:html": "htmlhint html/",
+    "start": "http-server ./html ",
+    "test": "playwright test tests/e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "htmlhint": "^1.7.1",
+    "http-server": "^14.1.1"
+  }
+}
