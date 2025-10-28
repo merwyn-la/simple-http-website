@@ -28,6 +28,9 @@ jobs:
       - name: Run HTMLHint
         run: npm run lint:html
 
+      - name: Start the server
+        run: npm run start
+
       - name: Curl the served page
         run: curl http://localhost:8080
 
