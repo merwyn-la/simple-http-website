@@ -28,19 +28,8 @@ jobs:
       - name: Run HTMLHint
         run: npm run lint:html
 
-      - name: Run setup script
-        run: ./scripts/ubuntu_setup.sh
-
-      - name: Start nginx
-        run: sudo nginx -c "$(pwd)/nginx.conf"
-
       - name: Curl the served page
-        run: curl http://domain.example.com:8080
+        run: curl http://localhost:8080
 
       - name: Run e2e tests
         run: npm run test
-
-      - name: Stop Nginx
-        run: sudo nginx -s stop
-
-
