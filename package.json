@@ -8,6 +8,8 @@
     "stop": "pkill -f http-server"
   },
   "devDependencies": {
+    "@level-ci/a11y-playwright": "^0.1.1",
+    "@level-ci/cli": "^0.1.8",
     "@playwright/test": "^1.56.1",
     "htmlhint": "^1.7.1",
     "http-server": "^14.1.1"
