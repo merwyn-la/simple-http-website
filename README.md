@@ -1,5 +1,5 @@
-# nginx-simple-website
-A basic HTML website running on nginx.
+# simple-e2e
+A basic HTML website for testing e2e workflows. 
 
 
 ## Pre-requirements
