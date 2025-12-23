@@ -1,4 +1,4 @@
-name: Level Access SDK Accessibility Test
+name: Simple E2E Test
 
 on:
   push:
